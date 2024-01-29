@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knight Travils</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Knight Travils</h1>
+    <label for="start">Starting Position</label>
+    <input type="text" name="start" id="start" maxlength="3" placeholder="eg: 0,0">
+    <label for="end">Ending Position</label>
+    <input type="text" name="end" id="end" maxlength="3" placeholder="eg: 7,7">
+    <button type="button">Find Shortest Path</button>
+    <span class="errorMsg"></span>
+    <dialog id="displayBox" class="display"></dialog>
+    <script src="main.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* height: 100vh; */
+}
+body {
+    background-color: rgb(179, 174, 174);
+}
+.cellRow {
+    display: flex;
+}
+.cell {
+    height: 75px;
+    width: 75px;
+}
+
+.blackCell {
+    background-color: black;
+    color: white;
+}
+
+.whiteCell {
+    background-color: white;
+    color: #000;
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+}
+
+.errorMsg {
+    color: red;
+}
+
+.display {
+    height: 200px;
+    width: 400px;
+    position: fixed;
+    top: 75%
+}

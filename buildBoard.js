@@ -1,6 +1,6 @@
+//creates 8*8 chess board
 export const gameBoard = () => {
     const board = document.createElement('div')
-    const defaultCoord = [0,0]
     const coordArr = []
 
     for(let i=0;i<8;i++) {
@@ -10,6 +10,9 @@ export const gameBoard = () => {
         coordArr.push(i)
         for(let j=0;j<8;j++) {
             const cell = document.createElement('div')
+            if(i==0 && j===0) {
+                cell.style.color = "red"
+            }
             cell.textContent = j
             coordArr.push(j)
             cell.dataset.coord = coordArr
@@ -28,6 +31,7 @@ export const gameBoard = () => {
     document.querySelector('body').appendChild(board)
 }
 
+//adds knight icon
 export function addIcon(target) {
     let iconSrc = "./assets/images/Knight-icon.jpg";
     const img = document.createElement('img');
@@ -38,6 +42,7 @@ export function addIcon(target) {
     cellNodes.forEach((cell) => {
         if (target.toString() === cell.dataset.coord) {
             cell.appendChild(img);
+            // cell.classList.add('path')
         }
     });
 }

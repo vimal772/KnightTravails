@@ -1,3 +1,4 @@
+//another way of knightMoves both give same result
 const squareRegistry = new Map()
 
 const chessSquare = (x,y) => {
@@ -40,7 +41,7 @@ const chessSquare = (x,y) => {
     }   
 }
 
-const knightTravails = (start, end) => {
+export const knightTravails = (start, end) => {
     squareRegistry.clear()
 
     const origin = chessSquare(...start)
@@ -67,5 +68,3 @@ const knightTravails = (start, end) => {
     console.log("The moves were");
     path.forEach(element => console.log(element.name()));
 }
-
-export { knightTravails };

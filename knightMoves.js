@@ -31,6 +31,7 @@ export function knightMoves(start, end) {
     }
 }
 
+//creates 64 array
 function buildBoard() {
     let board = []
         for(let i=0; i<8; i++) {
@@ -41,6 +42,7 @@ function buildBoard() {
     return board
 }
 
+//finds the matching index from that 64 array
 function findIndex(target, arr) {
     for(let i=0; i<arr.length; i++) {
         if(arr[i][0] === target[0] && arr[i][1] === target[1]) {
@@ -49,6 +51,7 @@ function findIndex(target, arr) {
     }
 }
 
+// creates newArr object 
 function buildInfoArr(boardArr, startIndex) {
     let newArr = []
     for(let i=0; i<boardArr.length; i++) {
@@ -61,7 +64,7 @@ function buildInfoArr(boardArr, startIndex) {
     return newArr
 }
 
-
+//
 function buildAdjList(board) {
     let adjList = []
     for(let i=0; i<board.length; i++) {
@@ -77,6 +80,7 @@ function buildAdjList(board) {
     return adjList
 }
 
+//possible next moves
 function findNextMove(index,x,y) {
     if(index == 0) return [x+2,y+1]
     if(index == 1) return [x+1,y+2]
@@ -88,6 +92,7 @@ function findNextMove(index,x,y) {
     if(index == 7) return [x+2,y-1]
 }
 
+//finds the next path
 function constructPath(board,infoArr,item,index,newArr) {
     if(item.predecessor === null) return
     if(item.predecessor != null) {
@@ -96,6 +101,7 @@ function constructPath(board,infoArr,item,index,newArr) {
     }
 }
 
+//check it has
 function containsSpot(arr, target) {
     if(arr.find(element => element[0] === target[0]) &&
     arr.find(element => element[1] === target[1])) {

@@ -6,6 +6,10 @@
 }
 body {
     background-color: rgb(179, 174, 174);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .cellRow {
     display: flex;
@@ -13,6 +17,8 @@ body {
 .cell {
     height: 75px;
     width: 75px;
+    line-height: 75px;
+    text-align: center;
 }
 
 .blackCell {
@@ -35,8 +41,39 @@ body {
 }
 
 .display {
-    height: 200px;
+    height: 180px;
     width: 400px;
     position: fixed;
-    top: 75%
+    top: 79%;
+    left: 39.65%;
+}
+
+h1,h3 {
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 15px;
+    height: 30px;
+    width: 100px;
+    font-size: 16px;
+}
+
+button {
+    height: 30px;
+    width: 300px;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+.display > button {
+    margin: 0 45px;
+}
+.display > p {
+    margin-left: 10px;
 }

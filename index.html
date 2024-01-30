@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="info">
     <h1>Knight Travils</h1>
+    <div>
     <label for="start">Starting Position</label>
     <input type="text" name="start" id="start" maxlength="3" placeholder="eg: 0,0">
     <label for="end">Ending Position</label>
     <input type="text" name="end" id="end" maxlength="3" placeholder="eg: 7,7">
+    </div>
     <button type="button">Find Shortest Path</button>
     <span class="errorMsg"></span>
+    </div>
     <dialog id="displayBox" class="display"></dialog>
     <script src="main.js" type="module"></script>
 </body>
